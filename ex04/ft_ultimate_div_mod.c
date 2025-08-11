@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blanglai <blanglai@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 19:28:50 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/10 19:43:27 by blanglai         ###   ########.fr       */
+/*   Updated: 2025/08/11 18:27:24 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	x;
 	int	y;
 
 	x = *a / *b;
 	y = *a % *b;
-
 	*a = x;
 	*b = y;
 }
-

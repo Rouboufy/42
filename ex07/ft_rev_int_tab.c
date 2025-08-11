@@ -6,29 +6,33 @@
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 10:56:27 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/11 17:46:06 by blanglai         ###   ########.fr       */
+/*   Updated: 2025/08/11 20:14:51 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int count;
-	int rever_tab[size];
-	count = 0;
+	int	temp;
+	int	i;
 
-	while(size > count )
+	i = 0;
+	while (i < size / 2)
 	{
-		printf("%d\n", tab[size - 1 - count]);
-		rever_tab[count]= tab[size - 1 - count];
-		count ++;
+		temp = tab[i];
+		tab[i] = tab[size - 1 - i];
+		tab[size - 1 - i] = temp;
+		i++;
 	}
 }
 
-int main()
+int	main(void)
 {
-	int arr[] ={1 ,2 , 3, 4, 5, 6};
-	int *a = arr;
-	int size = 6;
+	int	*a;
+	int	size;
+	int	arr[7];
+
+	arr[] = {1, 2, 3, 4, 5, 6};
+	size = 6;
+	a = arr;
 	ft_rev_int_tab(a, size);
 }

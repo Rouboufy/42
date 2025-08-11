@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: blanglai <blanglai@student.42tokyo.jp      +#+  +:+       +#+        */
+/*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 11:37:21 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/10 19:27:40 by blanglai         ###   ########.fr       */
+/*   Updated: 2025/08/11 18:25:58 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <unistd.h>*/
 
-void ft_ultimate_ft(int *********nbr)
+void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 /*	int	message;

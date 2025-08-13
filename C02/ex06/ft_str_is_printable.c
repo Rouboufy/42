@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 16:07:43 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/12 18:32:50 by blanglai         ###   ########.fr       */
+/*   Created: 2025/08/13 09:22:34 by blanglai          #+#    #+#             */
+/*   Updated: 2025/08/13 10:21:12 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
-{
-	unsigned int	i;
+#include <stdio.h>
 
-	i = 0;
-	while (i < n && src[i] != '\0')
+int	ft_str_is_printable(char *str)
+{
+	if (!*str)
+		return (1);
+	while (*str)
 	{
-		dest[i] = src[i];
-		i++;
+		if (!((*str >= 33 && *str <= 126)))
+			return (0);
+		str++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (1);
+}
+
+int	main(void)
+{
+	char	*a;
+
+	a = "bAnana";
+	ft_str_is_printable(a);
+	printf("%d", ft_str_is_printable(a));
 }

@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 14:11:59 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/13 09:04:58 by blanglai         ###   ########.fr       */
+/*   Created: 2025/08/12 18:48:06 by blanglai          #+#    #+#             */
+/*   Updated: 2025/08/13 09:04:10 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
+//#include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_alpha(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
+	if (!*str)
+		return (1);
+	while (*str)
 	{
-		dest[i] = src[i];
-		i++;
+		if (!((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z')))
+			return (0);
+		str++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
-/*int main(void)
+
+/*int	main(void)
 {
-	char src[] = "Hello";
-	char dest[10];
+	char	*a;
 
-	ft_strcpy(dest, src);
-
-	write(1, dest, 5);
-	write(1, "\n", 1);
-
-	return 0;
+	a = "banana";
+	ft_str_is_alpha(a);
+	printf("%d", ft_str_is_alpha(a));
 }*/

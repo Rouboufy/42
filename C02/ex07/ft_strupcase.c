@@ -1,39 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 14:11:59 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/13 09:04:58 by blanglai         ###   ########.fr       */
+/*   Created: 2025/08/13 10:33:29 by blanglai          #+#    #+#             */
+/*   Updated: 2025/08/13 12:16:22 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
+#include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	ft_convert(char c)
 {
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
+	if (c >= 'a' && c <= 'z')
 	{
-		dest[i] = src[i];
-		i++;
+		return (c - 32);
 	}
-	dest[i] = '\0';
-	return (dest);
 }
-/*int main(void)
+
+char	*ft_strupcase(char *str)
 {
-	char src[] = "Hello";
-	char dest[10];
+	char	*p;
 
-	ft_strcpy(dest, src);
+	*p = str;
+	while (*p)
+	{
+		*p = ft_convert(*p);
+		p++;
+	}
+	return (str);
+}
 
-	write(1, dest, 5);
-	write(1, "\n", 1);
+int	main(void)
+{
+	char	*a;
 
-	return 0;
-}*/
+	a = "bAnana";
+	ft_strupcase(a);
+	printf("%s", ft_strupcase(a));
+}

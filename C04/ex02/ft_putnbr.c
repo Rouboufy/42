@@ -1,48 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/14 08:14:56 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/17 15:07:04 by blanglai         ###   ########.fr       */
+/*   Created: 2025/08/18 09:29:43 by blanglai          #+#    #+#             */
+/*   Updated: 2025/08/18 13:38:34 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <unistd.h>
+#include <unistd.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+void	ft_putnbr(long nb)
 {
-	unsigned int	i;
-	unsigned int	src_len;
+	char	c;
 
-	src_len = 0;
-	while (src[src_len] != '\0')
+	if (nb < 0)
 	{
-		src_len++;
-		if (size != 0)
-		{
-			i = 0;
-			while (src[i] != '\0' && i < size - 1)
-			{
-				dest[i] = src[i];
-				i++;
-			}
-			dest[i] = '\0';
-		}
+		write(1, "-", 1);
+		ft_putnbr(-(long)nb);
+		return ;
 	}
-	return (src_len);
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	c = (nb % 10) + '0';
+	write(1, &c, 1);
 }
 
 // int	main(void)
 // {
-// 	char	src[] = "Hello";
-// 	char	dest[10];
+// 	int	n;
+// 	int	m;
 
-// 	ft_strlcpy(dest, src, 6);
-// 	write(1, dest, 7);
+// 	n = 0x7fffffff;
+// 	ft_putnbr(n);
+// 	write(1, "\n", 1);
+// 	m = -0x80000000;
+// 	ft_putnbr(m);
 // 	write(1, "\n", 1);
 // 	return (0);
 // }

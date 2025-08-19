@@ -6,7 +6,7 @@
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 08:17:18 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/19 13:07:45 by blanglai         ###   ########.fr       */
+/*   Updated: 2025/08/19 17:42:16 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,19 +67,19 @@ void	ft_putnbr_base(int nbr, char *base)
 	write(1, &base[n % len], 1);
 }
 
-int	main(void)
-{
-	int	nbr;
+// int	main(void)
+// {
+// 	int	nbr;
 
-	char base2[3] = "01";                 // Binary
-	char base8[9] = "poneyvif";           // octale
-	char base16[17] = "0123456789ABCDEF"; // Hexadecimal
-	nbr = 42;
-	ft_putnbr_base(nbr, base2);
-	write(1, "\n", 1);
-	ft_putnbr_base(nbr, base8);
-	write(1, "\n", 1);
-	ft_putnbr_base(nbr, base16);
-	write(1, "\n", 1);
-	return (0);
-}
+// 	char base2[3] = "01";                 // Binary
+// 	char base8[9] = "poneyvif";           // octale
+// 	char base16[17] = "0123456789ABCDEF"; // Hexadecimal
+// 	nbr = 42;
+// 	ft_putnbr_base(nbr, base2);
+// 	write(1, "\n", 1);
+// 	ft_putnbr_base(nbr, base8);
+// 	write(1, "\n", 1);
+// 	ft_putnbr_base(nbr, base16);
+// 	write(1, "\n", 1);
+// 	return (0);
+// }

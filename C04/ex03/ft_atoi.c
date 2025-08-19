@@ -6,7 +6,7 @@
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 13:39:04 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/18 17:29:33 by blanglai         ###   ########.fr       */
+/*   Updated: 2025/08/19 17:42:03 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,12 @@ int	ft_atoi(char *str)
 	return (result * sign);
 }
 
-int	main(void)
-{
-	int	n;
+// int	main(void)
+// {
+// 	int	n;
 
-	n = ft_atoi("   ++++-2147483649");
-	ft_putnbr(n);
-	write(1, "\n", 1);
-	return (0);
-}
+// 	n = ft_atoi("   ++++-2147483649");
+// 	ft_putnbr(n);
+// 	write(1, "\n", 1);
+// 	return (0);
+// }

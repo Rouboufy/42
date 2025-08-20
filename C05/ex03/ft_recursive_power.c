@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/20 16:01:14 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/21 08:10:40 by blanglai         ###   ########.fr       */
+/*   Created: 2025/08/21 07:42:27 by blanglai          #+#    #+#             */
+/*   Updated: 2025/08/21 08:02:38 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_iterative_power(int nb, int power)
+int	ft_recursive_power(int nb, int power)
 {
-	int	result;
-
 	if (power < 0)
 	{
 		return (0);
@@ -24,16 +22,10 @@ int	ft_iterative_power(int nb, int power)
 	{
 		return (1);
 	}
-	result = 1;
-	while (power > 0)
-	{
-		result *= nb;
-		power--;
-	}
-	return (result);
+	return (nb * ft_recursive_power(nb, power - 1));
 }
 
 int	main(void)
 {
-	printf("%d", ft_iterative_power(2, 5));
+	printf("%d", ft_recursive_power(2, 5));
 }

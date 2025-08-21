@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 08:11:33 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/21 10:24:51 by blanglai         ###   ########.fr       */
+/*   Created: 2025/08/21 10:25:16 by blanglai          #+#    #+#             */
+/*   Updated: 2025/08/21 10:26:40 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_fibonacci(int n)
+int ft_sqrt(int nb)
 {
-	if (n < 0)
-		return (-1);
-	if (n == 0)
-		return (0);
-	if (n == 1)
-		return (1);
-	return (ft_fibonacci(n - 1) + ft_fibonacci(n - 2));
-}
-int	main(void)
-{
-	printf("%d", ft_fibonacci(9));
+	
 }

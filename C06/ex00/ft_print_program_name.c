@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 08:11:33 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/21 18:20:30 by blanglai         ###   ########.fr       */
+/*   Created: 2025/08/21 16:37:47 by blanglai          #+#    #+#             */
+/*   Updated: 2025/08/21 16:50:58 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <unistd.h>
 
-int	ft_fibonacci(int n)
+int	main(int argc, char *argv[])
 {
-	if (n < 0)
-		return (-1);
-	if (n == 0)
+	char	*name;
+
+	if (argc != 1)
+	{
 		return (0);
-	if (n == 1)
-		return (1);
-	return (ft_fibonacci(n - 1) + ft_fibonacci(n - 2));
+	}
+	name = argv[0];
+	while (*name)
+	{
+		write(1, name, 1);
+		name++;
+	}
+	write(1, "\n", 1);
 }
-// int	main(void)
-// {
-// 	printf("%d", ft_fibonacci(9));
-// }

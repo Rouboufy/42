@@ -6,11 +6,11 @@
 /*   By: blanglai <blanglai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 15:43:22 by blanglai          #+#    #+#             */
-/*   Updated: 2025/08/20 15:58:12 by blanglai         ###   ########.fr       */
+/*   Updated: 2025/08/21 18:20:24 by blanglai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
 int	ft_recursive_factorial(int nb)
 {
@@ -25,4 +25,3 @@ int	ft_recursive_factorial(int nb)
 	}
 	return (nb * ft_recursive_factorial(nb - 1));
 }
-
